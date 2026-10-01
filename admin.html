@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#123B6D">
+  <link rel="stylesheet" href="style.css">
+  <title>관리자 - 집회·시위 주민안내</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">주민안내 관리자</div>
+    <a class="admin-link" href="index.html">주민 화면</a>
+  </header>
+
+  <main class="container admin-container">
+    <section class="hero compact">
+      <span class="badge">1차 테스트</span>
+      <h1>집회 안내정보 입력</h1>
+      <p>입력한 정보는 현재 사용 중인 브라우저에 저장됩니다.</p>
+    </section>
+
+    <form id="adminForm" class="form-card">
+      <label>페이지 제목
+        <input id="titleInput" maxlength="60" placeholder="예: 현재 집회 안내">
+      </label>
+
+      <label>한줄 안내
+        <textarea id="summaryInput" maxlength="150" rows="3" placeholder="주민 여러분의 안전한 통행을 위해 현장 정보를 안내합니다."></textarea>
+      </label>
+
+      <label>집회 장소
+        <input id="placeInput" maxlength="100" placeholder="예: 김포시 ○○로 일대">
+      </label>
+
+      <div class="two-col">
+        <label>시작
+          <input id="startInput" type="datetime-local">
+        </label>
+        <label>종료
+          <input id="endInput" type="datetime-local">
+        </label>
+      </div>
+
+      <label>행진 여부
+        <select id="marchInput">
+          <option value="없음">없음</option>
+          <option value="있음">있음</option>
+        </select>
+      </label>
+
+      <label>보행자 통행 안내
+        <textarea id="pedestrianInput" rows="4" maxlength="500" placeholder="예: 현장 주변 보행로는 통행 가능하나 ○○ 방향은 혼잡이 예상됩니다."></textarea>
+      </label>
+
+      <label>교통·우회 안내
+        <textarea id="trafficInput" rows="4" maxlength="500" placeholder="예: ○○교차로 주변 차량 정체가 예상되므로 우회도로 이용을 권장합니다."></textarea>
+      </label>
+
+      <label>소음 관련 안내
+        <textarea id="noiseInput" rows="4" maxlength="500" placeholder="예: 현장 소음은 관계 법령과 현장 여건에 따라 관리하고 있습니다."></textarea>
+      </label>
+
+      <label>경찰 현장조치
+        <textarea id="policeInput" rows="4" maxlength="500" placeholder="예: 보행자 통행 확보, 교통관리 및 현장 질서유지 활동을 실시하고 있습니다."></textarea>
+      </label>
+
+      <label>지도 링크
+        <input id="mapInput" type="url" placeholder="네이버지도·카카오맵 등 공유 링크">
+      </label>
+
+      <div class="form-actions">
+        <button class="button primary" type="submit">저장하기</button>
+        <button class="button secondary" type="button" id="resetBtn">초기값 복원</button>
+      </div>
+      <p id="saveMessage" class="save-message"></p>
+    </form>
+
+    <section class="qr-card">
+      <h2>QR 코드 만들기</h2>
+      <p>배포된 주민용 페이지 주소를 QR 생성 서비스에 넣어 사용하세요.</p>
+      <div class="url-box" id="pageUrl"></div>
+      <button class="button secondary" id="copyUrlBtn">주소 복사</button>
+      <p class="warning">※ 이 1차 버전은 별도 인증 서버가 없습니다. 실제 경찰 업무용 공개 운영 전에는 관리자 인증과 서버 저장 방식으로 전환해야 합니다.</p>
+    </section>
+  </main>
+
+  <footer>집회·시위 주민안내 시스템 · 1차 테스트 버전</footer>
+  <script src="app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

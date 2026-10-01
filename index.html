@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#123B6D">
+  <meta name="description" content="집회·시위 주민안내 QR 1차 버전">
+  <link rel="stylesheet" href="style.css">
+  <title>집회·시위 주민안내</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">집회·시위 주민안내</div>
+    <a class="admin-link" href="admin.html">관리자</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge" id="statusBadge">현장 안내</span>
+      <h1 id="title">현재 집회 안내</h1>
+      <p id="summary">주민 여러분의 안전하고 편리한 통행을 위해 현장 정보를 안내합니다.</p>
+    </section>
+
+    <section class="notice-card">
+      <div class="section-title">📍 집회 기본정보</div>
+      <div class="info-grid">
+        <div><span>장소</span><strong id="place">정보 없음</strong></div>
+        <div><span>시간</span><strong id="time">정보 없음</strong></div>
+        <div><span>행진</span><strong id="march">정보 없음</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">🚶 보행자 통행 안내</div>
+      <p id="pedestrian">현재 등록된 안내가 없습니다.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">🚗 교통·우회 안내</div>
+      <p id="traffic">현재 등록된 안내가 없습니다.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">🔊 소음 관련 안내</div>
+      <p id="noise">집회 현장의 소음은 관계 법령 및 현장 여건에 따라 관리됩니다.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">👮 경찰 현장조치</div>
+      <p id="police">주민 불편과 안전사고 예방을 위해 현장 상황에 따라 필요한 조치를 실시합니다.</p>
+    </section>
+
+    <section class="card map-card">
+      <div class="section-title">🗺️ 현장 위치</div>
+      <div id="mapPlaceholder" class="map-placeholder">
+        <div>지도 영역</div>
+        <small>1차 버전에서는 지도 링크를 등록하면 연결됩니다.</small>
+      </div>
+      <a id="mapLink" class="button secondary hidden" target="_blank" rel="noopener">지도에서 위치 보기</a>
+    </section>
+
+    <section class="help-card">
+      <strong>안내사항</strong>
+      <p>현장 상황에 따라 통행 및 교통 여건이 달라질 수 있습니다. 안전을 위해 경찰관의 현장 안내에 협조해 주시기 바랍니다.</p>
+    </section>
+  </main>
+
+  <footer>집회·시위 주민안내 시스템 · 1차 테스트 버전</footer>
+  <script src="app.js"></script>
+</body>
+</html>
